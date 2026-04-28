@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mengenal Pokemon dengan informasi lengkap dari PokéAPI. Cari berdasarkan nama atau ID, dan jelajahi data Pokémon favoritmu!">
+  <meta name="keywords" content="Pokemon, Pokemon API, PokeAPI, informasi Pokemon, data Pokemon, cari Pokemon, nama Pokemon, ID Pokemon">
+  <meta name="author" content="Faris Iskandar Hafidz">
+
+  <title>PokéEdu | Mengenal Pokemon</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <h1>PokéEdu</h1>
+      <p>Belajar tentang Pokémon dengan informasi lengkap dari PokéAPI.</p>
+    </section>
+
+    <section class="search-card">
+      <form id="searchForm">
+        <input id="pokemonInput" type="text" placeholder="Contoh: pikachu, charizard, mewtwo..." autocomplete="off" />
+        <button type="submit">Cari Pokémon</button>
+      </form>
+
+      <div id="message" class="message">
+        Ketik nama atau ID Pokémon, lalu tekan tombol cari.
+      </div>
+
+      <article id="pokemonCard" class="pokemon-card">
+        <div class="visual">
+          <img id="pokemonImage" class="pokemon-img" alt="Gambar Pokémon" />
+          <div id="pokemonId" class="id-pill"></div>
+        </div>
+
+        <div class="details">
+          <h2 id="pokemonName"></h2>
+          <div id="pokemonTypes" class="types"></div>
+          <p id="pokemonSummary" class="summary"></p>
+
+          <div class="meta-grid">
+            <div class="meta">
+              <span>Tinggi</span>
+              <strong id="height"></strong>
+            </div>
+            <div class="meta">
+              <span>Berat</span>
+              <strong id="weight"></strong>
+            </div>
+            <div class="meta">
+              <span>Total Stat</span>
+              <strong id="totalStats"></strong>
+            </div>
+          </div>
+
+          <h3 class="section-title">Kemampuan</h3>
+          <div id="pokemonAbilities" class="abilities"></div>
+
+          <h3 class="section-title">Statistik Kekuatan</h3>
+          <div id="pokemonStats" class="stats"></div>
+        </div>
+      </article>
+
+      <div class="navigation-buttons">
+        <button id="previousBtn" class="nav-btn" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+            </svg>
+        </button>
+        <button id="nextBtn" class="nav-btn" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+            </svg>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
